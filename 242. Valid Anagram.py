@@ -1,5 +1,22 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+        s = sorted(s)
+        t= sorted(t)
+        if s == t:
+            return True
+        return False
+
+s="a"
+t="ab"
+
+obj = Solution().isAnagram(s,t)
+print(obj)
+
+
+
+'''
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
         t=list(t)
 
         for i in s:
@@ -12,10 +29,4 @@ class Solution:
             return False
         else:
             return True
-        
-
-s="a"
-t="ab"
-
-obj = Solution().isAnagram(s,t)
-print(obj)
+'''
