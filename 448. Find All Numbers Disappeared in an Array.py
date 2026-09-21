@@ -1,6 +1,6 @@
 class Solution:
     def findDisappearedNumbers(self, nums):
-        num_set = set(nums)  # Create a set from the list for O(1) lookups
+        num_set = set(nums)  
         output = []
                 
         for i in range(1, len(nums) + 1):
