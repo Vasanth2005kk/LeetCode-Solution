@@ -4,10 +4,15 @@ from typing import List
 class Solution:
     def countNegatives(self, grid: List[List[int]]) -> int:
         count = 0
-        for i in grid:
-            for j in i:
-                if j < 0:
-                    count +=1
+        length = len(grid)
+        store = []
+
+        for i in range(length):
+            store.extend(grid[i])
+
+        for j in store:
+            if j < 0:
+                count += 1
 
         return count
     
